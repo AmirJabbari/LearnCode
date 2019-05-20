@@ -1,6 +1,7 @@
 package com.navin.learncode.adapter;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
@@ -12,6 +13,7 @@ public class TapAdapter extends FragmentStatePagerAdapter {
 
     private List<Fragment> mFragmentList=new ArrayList<>();
     private List<String> mFragmentTitleList=new ArrayList<>();
+
 
     public TapAdapter(FragmentManager fm) {
         super(fm);
@@ -29,7 +31,8 @@ public class TapAdapter extends FragmentStatePagerAdapter {
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        return mFragmentTitleList.get(position);
+       // return mFragmentTitleList.get(position);
+        return null;
     }
 
     @Override
