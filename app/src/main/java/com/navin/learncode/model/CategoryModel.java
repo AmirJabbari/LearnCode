@@ -4,6 +4,7 @@ public class CategoryModel {
 
   private String title;
   private int image;
+  private String id;
 
     public String getTitle() {
         return title;
@@ -19,5 +20,13 @@ public class CategoryModel {
 
     public void setImage(int image) {
         this.image = image;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

@@ -22,6 +22,7 @@
 
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card"
             android:layout_below="@id/txtSubject"
             android:layout_marginTop="10dp"
             android:layout_marginRight="5dp"
@@ -41,6 +42,35 @@
 
 
         </androidx.cardview.widget.CardView>
+        <RelativeLayout
+            android:layout_below="@id/card"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mobile_tutorial"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:id="@+id/title"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@id/title"
+                android:id="@+id/recycler_album"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <ProgressBar
+                android:visibility="visible"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progress"/>
+        </RelativeLayout>
 
     </RelativeLayout>
 

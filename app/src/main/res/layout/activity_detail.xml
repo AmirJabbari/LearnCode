@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_1000"
+    tools:context=".activity.DetailActivity"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:id="@+id/img"
+            app:srcCompat="@drawable/ic_chevron_left_black_24dp"
+            tools:ignore="VectorDrawableCompat"/>
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"
+        android:text="@string/failed_to_connect_network"
+        android:visibility="visible"
+        android:id="@+id/txtData"
+        android:textColor="@color/white"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"
+        android:text="@string/no_data_found"
+        android:visibility="gone"
+        android:id="@+id/txtDataa"
+        android:textColor="@color/white"/>
+    <ProgressBar
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/txtData"
+        android:id="@+id/progress"
+        android:layout_marginBottom="10dp"
+        android:layout_centerInParent="true"/>
+
+
+  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+      android:layout_width="match_parent"
+      android:layout_below="@id/rel1"
+      android:id="@+id/refresh"
+      android:layout_height="match_parent">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:visibility="visible"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/recyclerView">
+
+
+
+          </androidx.recyclerview.widget.RecyclerView>
+
+
+      </RelativeLayout>
+
+
+
+  </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+
+
+
+</RelativeLayout>

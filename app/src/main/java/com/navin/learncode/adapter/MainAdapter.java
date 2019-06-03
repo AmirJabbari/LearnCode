@@ -2,6 +2,7 @@ package com.navin.learncode.adapter;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.navin.learncode.R;
+import com.navin.learncode.activity.DetailActivity;
 import com.navin.learncode.model.CategoryModel;
 import com.squareup.picasso.Picasso;
 
@@ -49,7 +51,10 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
         holder.relMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mcontext,categoryModel.getTitle(),Toast.LENGTH_LONG).show();
+                Intent intent=new Intent(mcontext,DetailActivity.class);
+                intent.putExtra("id",categoryModel.getId());
+                mcontext.startActivity(intent);
+
             }
         });
 
